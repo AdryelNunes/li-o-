@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adicionar tarefa</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="js/site.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">TO-DO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listaTarefas.html">Lista de tarefas</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="addTarefa.html">Adicionar tarefa</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <form>
+            <div class="form-group">
+                <label for="nome_tarefa">Tarefa</span>
+                    <input id="nome_tarefa" type="text" class="form-control" placeholder="Tarefa" />
+                    <span style="color: red;" id="erro_nome_tarefa" ></span>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="return addTarefa($('#nome_tarefa').val());">
+                Salvar tarefa
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
